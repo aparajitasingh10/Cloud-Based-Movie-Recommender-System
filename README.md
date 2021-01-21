@@ -1,4 +1,7 @@
 # Cloud-Based-Movie-Recommender-System
+
+## View the project at https://www.youtube.com/watch?v=cyC2jlzdmn4
+
 A recommender system is used to recommend items to a user based on the judgement whether they would prefer the item or not. This is done by predicting the future preferences of the user on the basis of past preferences and the preferences of similar users. The goal of this project is to create such a recommender system for movies using collaborative filtering approach. For an interactive experience for online users, we are created a data application using open source frameworks - Streamlit. The application is hosted as a Docker container on GCP and deployed on Kubernetes cluster using GKE. A load balancer service (deployed as Ingress service on GKE) distributes server workloads across multiple computing resources so the app can handle multiple call requests without timing out. In addition, GKE provides a stable IP address that external users can use to access the app. When the cluster receives a request, the load balancer routes it to one of the Pods in the Service, which then returns an instance of the Streamlit app. Our primary goal is to implement the recommender system for movies. Our stretch goal is to extend this system to work with other datasets such as music, ecommerce, etc. Moreover, in addition to the offline recommendation algorithm, we are working towards integrating an online recommender algorithm as well.
 
 ## Architecture
